@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *,
 *::before,
 *::after {
@@ -126,7 +129,7 @@ img {
   flex-direction: column;
   float: left;
   justify-content: center;
-  height: 100vh;
+  height: 90dvh;
   padding: 1em;
   width: 100%;
 }

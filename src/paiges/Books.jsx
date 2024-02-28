@@ -16,7 +16,7 @@ function Books({ query }) {
     error,
     isLoading,
   } = useQuery(['books', query], () => getBook(query), {
-    enabled: !!query,
+    enabled: !!query, // This ensures the query runs only if query is not empty
   })
 
   if (error) return <div>An error occurred: {error.message}</div>
@@ -27,7 +27,7 @@ function Books({ query }) {
     <>
       <Main>
         {books?.totalItems > 0 ? (
-          `Founded ${books?.totalItems}`
+          <p>Founded {books?.totalItems}</p>
         ) : (
           <div id="wrapper">
             <div id="container">
