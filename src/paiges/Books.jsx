@@ -2,14 +2,7 @@ import { useQuery } from 'react-query'
 import { getBook } from '../apiBook/apiBook'
 import Book from '../ui/Book'
 import Spinner from '../ui/Spinner'
-import styled from 'styled-components'
-const Main = styled.div`
-  color: var(--color-text);
-  font-size: 2rem;
-  text-align: center;
-  margin: 2rem 0;
-  font-weight: bold;
-`
+
 function Books({ query }) {
   const {
     data: books,
@@ -25,20 +18,22 @@ function Books({ query }) {
 
   return (
     <>
-      <Main>
+      <div className="flex justify-center items-center text-3xl font-bold text-gray-800 mt-8">
         {books?.totalItems > 0 ? (
           <p>Founded {books?.totalItems}</p>
         ) : (
-          <div id="wrapper">
+          <div id="wrapper" className="mt-8">
             <div id="container">
               <h1>Start looking for an author or a book</h1>
             </div>
           </div>
-        )}{' '}
-      </Main>
-      {books?.items.map((book) => (
-        <Book book={book} key={book.id} query={query} />
-      ))}
+        )}
+      </div>
+      <div className="flex flex-wrap justify-center gap-4">
+        {books?.items.map((book) => (
+          <Book book={book} key={book.id} query={query} />
+        ))}
+      </div>
     </>
   )
 }

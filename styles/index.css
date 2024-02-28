@@ -12,9 +12,9 @@
   transition: background-color 0.3s, border 0.3s;
 }
 
-html {
+/* html {
   font-size: 62.5%;
-}
+} */
 
 body {
   font-family: 'Anta', sans-serif, 'Poppins', sans-serif;
