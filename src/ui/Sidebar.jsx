@@ -102,13 +102,13 @@ function Sidebar({ query, onQuery }) {
   }
 
   return (
-    <div className="flex justify-between bg-[#d6cec2] py-4 px-6">
+    <div className="flex justify-between items-center bg-[#d6cec2] py-4 px-6">
       <ul className="flex gap-4 ">
         <li>
           <NavLink
             to="/home"
             className="flex px-5 items-center gap-3 text-xl font-semibold text-gray-700 hover:text-gray-900 transition duration-300"
-            activeClassName="text-gray-900 bg-acsent rounded px-4 py-2"
+            activeClassName="text-gray-900 bg-[#f5f3f0]rounded px-4 py-2"
           >
             Home
           </NavLink>
@@ -117,7 +117,7 @@ function Sidebar({ query, onQuery }) {
           <NavLink
             to="/books"
             className="flex px-5 items-center gap-3 text-xl font-semibold text-gray-700 hover:text-gray-900 transition duration-300"
-            activeClassName="text-gray-900 bg-acsent rounded px-4 py-2"
+            activeClassName="text-gray-900 bg-[#f5f3f0] rounded px-4 py-2"
           >
             Books
           </NavLink>
@@ -126,7 +126,7 @@ function Sidebar({ query, onQuery }) {
           <NavLink
             to="/information"
             className="flex px-5 items-center gap-3 text-xl font-semibold text-gray-700 hover:text-gray-900 transition duration-300"
-            activeClassName="text-gray-900 bg-acsent rounded px-4 py-2"
+            activeClassName="text-gray-900 bg-[#f5f3f0] rounded px-4 py-2"
           >
             Information
           </NavLink>
