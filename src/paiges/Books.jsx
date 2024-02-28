@@ -16,7 +16,7 @@ function Books({ query }) {
     error,
     isLoading,
   } = useQuery(['books', query], () => getBook(query), {
-    enabled: !!query, // This ensures the query runs only if query is not empty
+    enabled: !!query,
   })
 
   if (error) return <div>An error occurred: {error.message}</div>
