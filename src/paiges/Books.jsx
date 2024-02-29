@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query'
 import { getBook } from '../apiBook/apiBook'
 import Book from '../ui/Book'
-import Spinner from '../ui/Spinner'
+import Loading from '../ui/Loading'
 
 function Books({ query }) {
   const {
@@ -14,7 +14,7 @@ function Books({ query }) {
 
   if (error) return <div>An error occurred: {error.message}</div>
 
-  if (isLoading) return <Spinner />
+  if (isLoading) return <Loading />
 
   return (
     <>

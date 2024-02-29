@@ -6,6 +6,7 @@ import Books from './paiges/Books'
 import Information from './paiges/Information'
 import PageNotFound from './ui/PageNotFound'
 import { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const queryClient = new QueryClient({
   defaultOptions: {
