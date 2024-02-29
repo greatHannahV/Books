@@ -7,15 +7,15 @@ import Information from './paiges/Information'
 import PageNotFound from './ui/PageNotFound'
 import { useState } from 'react'
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 0,
+    },
+  },
+})
 function App() {
   const [query, setQuery] = useState('')
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        staleTime: 0,
-      },
-    },
-  })
 
   return (
     <QueryClientProvider client={queryClient}>

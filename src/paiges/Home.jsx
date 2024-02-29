@@ -118,12 +118,12 @@ function Dashboard({ query, onQuery }) {
 
   if (isLoading) return <Spinner />
 
-  if (!authorBiographyData) {
+  if (!authorBiographyData || authorBiographyData.type === 'disambiguation') {
     return (
       <div className="text-center">
         <div id="wrapper">
           <div id="container">
-            <h1>Start looking for an author or a book</h1>
+            <h1>Start looking for an author</h1>
           </div>
         </div>
       </div>
